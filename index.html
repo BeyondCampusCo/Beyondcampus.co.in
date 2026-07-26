@@ -101,19 +101,46 @@ align-items:center;
 text-align:center;
 
 padding:120px 20px;
+  position: relative;
+overflow: hidden;
 
 }
+.hero::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:#00D4FF22;
+    filter:blur(140px);
+    top:-250px;
+    right:-150px;
+    border-radius:50%;
+    z-index:-1;
+}
 
+.hero::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#004DFF18;
+    filter:blur(130px);
+    bottom:-250px;
+    left:-150px;
+    border-radius:50%;
+    z-index:-1;
+}
 .hero h1{
 
-font-size:72px;
+font-size: clamp(56px, 8vw, 92px);
+font-weight: 800;
+line-height: 1;
+letter-spacing: -3px;
+margin-bottom: 25px;
 
-font-weight:800;
-
-line-height:1.1;
-
-margin-bottom:20px;
-
+background: linear-gradient(90deg,#ffffff,#b9f3ff,#00D4FF);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .hero p{
@@ -132,13 +159,17 @@ line-height:1.7;
 
 .btn{
 
-display:inline-block;
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
 
 margin-top:45px;
 
-padding:18px 42px;
+padding:18px 44px;
 
-border-radius:50px;
+border-radius:999px;
 
 text-decoration:none;
 
@@ -146,19 +177,53 @@ font-size:18px;
 
 font-weight:700;
 
-background:#00D4FF;
+background:linear-gradient(135deg,#00D4FF,#009DFF);
 
 color:#08131F;
 
-transition:.35s;
+box-shadow:0 12px 35px rgba(0,212,255,.35);
+
+transition:all .35s ease;
+
+position:relative;
+
+overflow:hidden;
 
 }
 
 .btn:hover{
 
-transform:translateY(-6px);
+transform:translateY(-6px) scale(1.04);
 
-box-shadow:0 0 30px #00D4FF88;
+box-shadow:0 18px 45px rgba(0,212,255,.45);
+
+}
+
+.btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:60%;
+
+height:100%;
+
+background:rgba(255,255,255,.25);
+
+transform:skewX(-25deg);
+
+transition:.6s;
+
+}
+
+.btn:hover::before{
+
+left:140%;
 
 }
 
@@ -190,21 +255,43 @@ font-size:18px;
 
 nav{
 
-padding:20px;
+padding:20px 8%;
+
+background:rgba(8,19,31,.75);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+box-shadow:0 8px 30px rgba(0,0,0,.25);
 
 }
 
 nav ul{
 
-gap:18px;
+gap:32px;
 
-font-size:14px;
+font-size:16px;
+
+font-weight:600;
 
 }
 
 .logo{
 
-font-size:24px;
+font-size:32px;
+
+font-weight:800;
+
+letter-spacing:-1px;
+
+background:linear-gradient(90deg,#00D4FF,#7BE7FF);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
 
 }
 
@@ -238,30 +325,52 @@ font-size:24px;
 
 <section class="hero">
 
-<div>
+  <div class="hero-content">
 
-<h1>Journeys Beyond<br>Classrooms</h1>
+    <span class="hero-tag">
+        ✈ Student Travel • Adventure • Experiences
+    </span>
 
-<p>
+    <h1>
+        Travel Beyond<br>
+        The Campus
+    </h1>
 
-India's next generation student travel platform.
+    <p>
+        Beyond Campus is a student-first travel platform built to create unforgettable journeys,
+        exciting adventures, industrial visits, and meaningful experiences across India.
+    </p>
 
-Explore adventures, build friendships,
+    <div class="hero-buttons">
 
-and create unforgettable memories with Beyond Campus.
+        <a href="#" class="btn">
+            Explore Beyond →
+        </a>
 
-</p>
+        <a href="#" class="btn secondary">
+            Join Community
+        </a>
 
-<a href="#" class="btn">Explore Trips</a>
+    </div>
 
-<div class="scroll">
+    <div class="hero-features">
 
-SCROLL TO EXPLORE ↓
+        <div class="feature">
+            🎒 Student First
+        </div>
+
+        <div class="feature">
+            🛡 Safe & Organized
+        </div>
+
+        <div class="feature">
+            🌍 New Experiences
+        </div>
+
+    </div>
 
 </div>
-
-</div>
-
+  
 </section>
 
 </body>
