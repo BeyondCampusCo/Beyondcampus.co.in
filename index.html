@@ -88,6 +88,10 @@ nav a:hover{
 color:#00D4FF;
 }
 
+.menu-toggle{
+    display:none;
+}
+    
 .hero{
 
 min-height:100vh;
@@ -294,7 +298,37 @@ background:linear-gradient(90deg,#00D4FF,#7BE7FF);
 -webkit-text-fill-color:transparent;
 
 }
+.logo img{
+    height:90px;
+    width:auto;
+}
 
+.menu-toggle{
+    display:block;
+    font-size:32px;
+    color:#fff;
+    cursor:pointer;
+}
+
+#navMenu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#08131F;
+    flex-direction:column;
+    padding:20px 0;
+}
+
+#navMenu.active{
+    display:flex;
+}
+
+#navMenu li{
+    text-align:center;
+    margin:12px 0;
+}
 }
 
 </style>
@@ -303,24 +337,23 @@ background:linear-gradient(90deg,#00D4FF,#7BE7FF);
 
 <body>
 
-<nav><div class="logo">
-    <img src="ChatGPT Image Jul 26, 2026, 04_49_55 PM.png" alt="BeyondCampus.co Logo">
-</div>
+<nav>
 
+    <div class="logo">
+        <img src="ChatGPT Image Jul 26, 2026, 04_49_55 PM.png" alt="BeyondCampus Logo">
+    </div>
 
-<ul>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+    </div>
 
-<li><a href="#">Home</a></li>
-
-<li><a href="#">Trips</a></li>
-
-<li><a href="#">Gallery</a></li>
-
-<li><a href="#">About</a></li>
-
-<li><a href="#">Contact</a></li>
-
-</ul>
+    <ul id="navMenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Trips</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 
 </nav>
 
@@ -373,6 +406,12 @@ background:linear-gradient(90deg,#00D4FF,#7BE7FF);
 </div>
   
 </section>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
