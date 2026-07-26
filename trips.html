@@ -31,6 +31,18 @@ font-weight:700;
 border-bottom:1px solid rgba(255,255,255,.08);
 }
 
+.logo{
+color:white;
+text-decoration:none;
+font-weight:700;
+font-size:34px;
+transition:.3s;
+}
+
+.logo:hover{
+color:#00D4FF;
+}
+
 .container{
 max-width:1000px;
 margin:auto;
@@ -50,67 +62,41 @@ margin-bottom:60px;
 }
 
 .trip-card{
-
 background:rgba(255,255,255,.05);
-
 border:1px solid rgba(255,255,255,.08);
-
 border-radius:22px;
-
 padding:35px;
-
 transition:.35s;
-
 cursor:pointer;
-
 text-decoration:none;
-
 display:block;
-
 color:white;
-
 }
 
 .trip-card:hover{
-
 transform:translateY(-8px);
-
 border-color:#00D4FF;
-
 box-shadow:0 15px 40px rgba(0,212,255,.18);
-
 }
 
 .trip-card h2{
-
 font-size:32px;
-
 margin-bottom:10px;
-
 }
 
 .trip-card p{
-
 color:#d2dae3;
-
 margin-bottom:25px;
-
 }
 
 .btn{
-
 display:inline-block;
-
 padding:14px 30px;
-
 background:#00D4FF;
-
 border-radius:50px;
-
 color:#08131F;
-
 font-weight:700;
-
+cursor:pointer;
 }
 
 </style>
@@ -121,7 +107,9 @@ font-weight:700;
 
 <header>
 
-Beyond Campus
+<a href="index.html" class="logo">
+BeyondCampus.co
+</a>
 
 </header>
 
@@ -130,9 +118,7 @@ Beyond Campus
 <h1>Available Trips</h1>
 
 <p class="subtitle">
-
 Choose your next adventure.
-
 </p>
 
 <a href="waterpark.html" class="trip-card">
@@ -140,15 +126,11 @@ Choose your next adventure.
 <h2>🌊 Water Park Trip</h2>
 
 <p>
-
 Exclusive trip for SLIETians.
-
 </p>
 
 <span class="btn">
-
 View Details →
-
 </span>
 
 </a>
@@ -156,5 +138,4 @@ View Details →
 </div>
 
 </body>
-
 </html>
